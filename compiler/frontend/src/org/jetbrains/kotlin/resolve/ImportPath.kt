@@ -39,7 +39,7 @@ val Import.importedName: Name? get() {
 }
 
 fun Import.getText(): String {
-    val fqNameStr = fqName.toUnsafe().render() ?: return ""
+    val fqNameStr = fqName.toUnsafe().render()
     val pathStr = fqNameStr + if (isAllUnder) ".*" else ""
     return pathStr + if (alias != null && !isAllUnder) (" as " + alias?.asString()) else ""
 }
