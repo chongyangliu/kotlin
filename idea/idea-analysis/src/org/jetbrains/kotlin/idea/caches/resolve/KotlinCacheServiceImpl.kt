@@ -405,7 +405,7 @@ private fun globalResolveSessionProvider(
             debugName, project, globalContext, facadeKey,
             syntheticFiles, delegateResolverForProject, moduleFilter,
             allModules,
-            delegateResolverProvider?.builtInsCache,
+            delegateResolverProvider?.builtIns,
             dependencies
     )
 }

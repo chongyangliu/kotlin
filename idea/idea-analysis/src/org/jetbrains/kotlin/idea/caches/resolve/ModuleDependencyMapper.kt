@@ -139,12 +139,12 @@ fun getAllProjectSdks(): Collection<Sdk> {
 
 interface ModuleResolverProvider {
     val resolverForProject: ResolverForProject<IdeaModuleInfo>
-    val builtInsCache: KotlinBuiltIns
+    val builtIns: KotlinBuiltIns
     val cacheDependencies: Collection<Any>
 }
 
 class ModuleResolverProviderImpl(
         override val resolverForProject: ResolverForProject<IdeaModuleInfo>,
-        override val builtInsCache: KotlinBuiltIns,
+        override val builtIns: KotlinBuiltIns,
         override val cacheDependencies: Collection<Any>
 ) : ModuleResolverProvider
